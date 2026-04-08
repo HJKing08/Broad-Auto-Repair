@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Download Broad Auto Repair Website</title>
+<style>
+body { font-family: Arial, sans-serif; text-align: center; padding: 50px; background:#111; color:#fff;}
+button { padding: 15px 30px; background: red; color: white; border:none; border-radius: 8px; font-size: 18px; cursor:pointer; transition: 0.3s;}
+button:hover { background: darkred; }
+</style>
+</head>
+<body>
+<h1>Download Broad Auto Repair Website</h1>
+<p>Click the button below to download the GitHub-ready <code>index.html</code> file.</p>
+<button id="downloadBtn">Download index.html</button>
+
+<script>
+const htmlContent = `<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Broad Auto Repair</title>
+<link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+body { margin:0; font-family: 'Poppins', sans-serif; background: linear-gradient(135deg, #0f0f0f, #1c1c1c); color:#fff;}
+header { text-align:center; padding:30px; background:#000; border-bottom:3px solid red; }
+.slogan { font-family:'Russo One'; color:red; font-size:22px; margin-top:10px; }
+.container { padding:30px; max-width:1000px; margin:auto; }
+button { padding:12px 18px; margin:8px; border:none; border-radius:8px; background: linear-gradient(45deg, red, darkred); color:white; cursor:pointer; font-size:15px; transition: all 0.3s ease;}
+button:hover { transform: translateY(-4px) scale(1.05); box-shadow:0 10px 20px rgba(255,0,0,0.4);}
+button:active { transform: scale(0.95);}
+.card { background:#1e1e1e; padding:20px; border-radius:12px; margin-top:20px; box-shadow:0 8px 20px rgba(0,0,0,0.5);}
+.review { background:#2a2a2a; padding:15px; margin:10px 0; border-left:4px solid red; border-radius:6px; transition:0.3s;}
+.review:hover { transform: scale(1.02);}
+.call-btn { display:inline-block; margin-top:20px; background:green; padding:15px 20px; border-radius:10px; text-decoration:none; color:white; font-weight:bold; transition:0.3s;}
+.call-btn:hover { background:limegreen; transform:scale(1.05);}
+iframe { width:100%; height:300px; border-radius:10px; margin-top:15px; border:none;}
+.hidden { display:none;}
+</style>
+</head>
+<body>
+<header>
+<h1>Broad Auto Repair</h1>
+<div class="slogan">MAKE SURE TO ASK FOR JAVAID</div>
+</header>
+<div class="container">
+<div class="card">
+<h2>Our Services</h2>
+<button onclick="selectService('oil')">Oil Change</button>
+<button onclick="selectService('brakes')">Brake Repair</button>
+<button onclick="selectService('engine')">Engine Replacement</button>
+<button onclick="selectService('transmission')">Transmission Replacement</button>
+<button onclick="selectService('both')">Engine + Transmission</button>
+<button onclick="selectService('tire')">Tire Replacement</button>
+<button onclick="selectService('battery')">Battery Replacement</button>
+<button onclick="selectService('suspension')">Suspension Repair</button>
+<button onclick="selectService('ac')">AC Repair</button>
+<button onclick="selectService('alignment')">Wheel Alignment</button>
+<button onclick="selectService('diagnostic')">Diagnostics</button>
+<button onclick="selectService('exhaust')">Exhaust Repair</button>
+<button onclick="selectService('other')">Other Service</button>
+</div>
+<div id="brands" class="card hidden">
+<h2>Select Your Car Brand</h2>
+<button onclick="selectBrand('toyota')">Toyota</button>
+<button onclick="selectBrand('honda')">Honda</button>
+<button onclick="selectBrand('ford')">Ford</button>
+<button onclick="selectBrand('chevy')">Chevy</button>
+<button onclick="selectBrand('nissan')">Nissan</button>
+<button onclick="selectBrand('hyundai')">Hyundai</button>
+<button onclick="selectBrand('kia')">Kia</button>
+<button onclick="selectBrand('jeep')">Jeep</button>
+<button onclick="selectBrand('dodge')">Dodge</button>
+<button onclick="selectBrand('subaru')">Subaru</button>
+<button onclick="selectBrand('volkswagen')">Volkswagen</button>
+<button onclick="selectBrand('bmw')">BMW</button>
+<button onclick="selectBrand('audi')">Audi</button>
+<button onclick="selectBrand('mercedes')">Mercedes</button>
+<button onclick="selectBrand('other')">Other Brand</button>
+</div>
+<div id="message" class="card hidden"></div>
+<a href="tel:+16099438718" class="call-btn">📞 Call Now</a>
+<div class="card">
+<h2>About Us</h2>
+<p>Broad Auto Repair in Millville, NJ provides oil changes, brake work, engine services, tires, batteries, suspension, AC repair, wheel alignment, diagnostics, exhaust work, and more. We are known for quick, reliable service and fair pricing.</p>
+</div>
+<div class="card">
+<h2>Customer Reviews</h2>
+<div class="review">⭐️⭐️⭐️⭐️⭐️ "Very honest mechanics. Prices were fair and the work was completed quickly."</div>
+<div class="review">⭐️⭐️⭐️⭐️⭐️ "Best shop around! They fixed my car the same day."</div>
+<div class="review">⭐️⭐️⭐️⭐️⭐️ "Friendly staff and excellent service. Highly recommended."</div>
+<div class="review">⭐️⭐️⭐️⭐️ "Good experience overall. I will return for future service."</div>
+</div>
+<div class="card">
+<h2>Find Us</h2>
+<iframe src="https://www.google.com/maps?q=918+E+Broad+St,+Millville,+NJ&output=embed"></iframe>
+</div>
+</div>
+<script>
+let selectedService="";
+function selectService(service){selectedService=service;document.getElementById('brands').classList.remove('hidden');document.getElementById('message').classList.add('hidden');}
+function selectBrand(brand){let message=document.getElementById('message');message.classList.remove('hidden');if(brand==='bmw'||selectedService==='engine'||selectedService==='transmission'||selectedService==='both'||selectedService==='other'){message.innerHTML='Please give us a call to ensure we have the right mechanics available for your job.';}else if(brand==='other'){message.innerHTML='Please give us a call to confirm we can handle your vehicle.';}else{message.innerHTML='We can do that! Just give us a call to schedule a time.';}}
+</script>
+</body>
+</html>`;
+
+document.getElementById('downloadBtn').addEventListener('click', function() {
+    const blob = new Blob([htmlContent], { type: 'text/html' });
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = 'index.html';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+});
+</script>
+</body>
+</html>
